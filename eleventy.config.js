@@ -25,7 +25,7 @@ const shortcodes = {
 		});
 	},
 	svg: async function svgShortcode(file) {
-		const svgString = fs.readFileSync('./assets/icons/' + file);
+		const svgString = fs.readFileSync('./assets/' + file);
 		const currentColor = svgString
 			.toString()
 			.replace(/#000000/g, 'currentColor')
@@ -63,8 +63,8 @@ export default async function (eleventyConfig) {
 			data: '_data',
 			layouts: '_layouts',
 		},
-		templateFormats: ['html', 'njk', 'md'],
-		markdownTemplateEngine: 'njk',
-		htmlTemplateEngine: 'njk',
+		templateFormats: ['html', 'liquid', 'md'],
+		markdownTemplateEngine: 'liquid',
+		htmlTemplateEngine: 'liquid',
 	};
 }

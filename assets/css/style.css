@@ -1,0 +1,119 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+* {
+	margin: 0;
+}
+
+body {
+	line-height: 1.5;
+	font-family: Garamond, 'Palatino', Georgia, serif;
+	font-size: clamp(1rem, 0.667rem + 1.481vw, 2rem);
+	background-color: #1f2f2f;
+	background-image: url('../media/green-fibers.webp');
+	color: #fff;
+	-webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+
+video,
+img,
+svg {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+.layout-home .content {
+	position: relative;
+	min-height: 100vh;
+	min-height: 100dvh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 2rem;
+	gap: 4rem;
+}
+.layout-home a {
+	color: white;
+	text-decoration: none;
+	max-width: fit-content;
+	text-align: center;
+	padding: 0.1em 0.5em;
+	text-align: center;
+}
+
+.layout-home a:hover {
+	color: white;
+	text-decoration: underline;
+}
+.layout-home a:hover svg {
+	text-shadow: 0 0 0.1em gold;
+}
+.layout-home nav {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 2rem;
+}
+.layout-home .link-icon {
+	width: 1em;
+	margin: 0 auto 0.5rem auto;
+}
+.layout-home video {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	mix-blend-mode: exclusion;
+	opacity: 0.05;
+}
+
+.layout-home .logo {
+	max-width: 36rem;
+	width: 100%;
+	color: rgb(232, 194, 97);
+}
+.layout-home .content {
+	position: relative;
+	z-index: 2;
+}
+
+.page {
+	color: rgb(23, 25, 32);
+	margin: 1rem auto;
+	max-width: 40rem;
+	padding: max(4vw, 1rem);
+
+	background-color: #f7f6f1;
+	background-image: url('../media/beige-paper.png');
+	/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
