@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en" class="page-{{ page.fileSlug }}">
+  {% render 'head.liquid' %}
+  <body>
+    <div class="home-frame">
+      <header class="logo">
+        {%- svg 'media/logo.svg' %}
+      </header>
+      {% render 'divider.liquid' %}
+      <nav class="link-list">
+        {%- for link in links %}
+          <a class="fancy-link" href="{{ link.url }}">
+            {% svg 'icons/left.svg' %}
+            <div class="title">
+              {{ link.title }}
+            </div>
+            {% svg 'icons/right.svg' %}
+          </a>
+        {%- endfor %}
+      </nav>
+      {% render 'divider.liquid' %}
+    </div>
+  </body>
+</html>

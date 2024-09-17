@@ -1,0 +1,13 @@
+<!doctype html>
+<html lang="en" class="page-{{ page.fileSlug }}">
+  {% render 'head.liquid' %}
+  <body>
+    <article class="page">
+      <header>
+        <a href="/">{% svg 'media/logo.svg' %}</a>
+        {% render 'divider.liquid' %}
+      </header>
+      {{ content }}
+    </article>
+  </body>
+</html>

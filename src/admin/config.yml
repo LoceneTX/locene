@@ -13,7 +13,13 @@ collections:
     create: true # Allow users to create new documents in this collection
     slug: '' # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
-      - { label: 'Layout', name: 'layout', widget: 'hidden', default: 'base.liquid' }
+      - {
+          label: 'Layout',
+          name: 'layout',
+          widget: 'select',
+          options: ['home.liquid', 'page.liquid', 'base.liquid'],
+          default: 'base.liquid',
+        }
       - { label: 'Title', name: 'title', widget: 'string' }
       - {
           label: 'Publish Date',
@@ -32,4 +38,3 @@ collections:
         fields:
           - { label: URL, name: url, widget: string, default: 'https://google.com' }
           - { label: Title, name: title, widget: string, default: 'Google' }
-          - { label: Icon, name: icon, widget: string, default: 'link.svg' }

@@ -1,5 +1,5 @@
 ---
-layout: base.liquid
+layout: home.liquid
 title: Index
 date: 2024-09-16
 links:
@@ -19,39 +19,3 @@ links:
     title: Policies
     icon: check-square.svg
 ---
-<div class="layout-home">
-  <video
-    aria-hidden="true"
-    class="background-video"
-    preload="auto"
-    autoplay
-    loop
-    muted
-    playsinline
-    poster="/assets/media/clock.webp"
-  >
-    <source src="/assets/media/clock.mp4" type="video/mp4">
-  </video>
-  <div class="content">
-    <div class="logo">
-      {%- svg 'media/logo.svg' %}
-    </div>
-    <nav>
-      {%- for link in links %}
-        <a class="home-link" href="{{ link.url }}">
-          {%- if link.icon %}
-            {%- assign icon = 'icons/' | append: link.icon %}
-          {%- else %}
-            {%- assign icon = 'icons/link.svg' %}
-          {%- endif %}
-          <div class="link-icon">
-            {%- svg icon %}
-          </div>
-          <div class="link-title">
-            {{ link.title }}
-          </div>
-        </a>
-      {%- endfor %}
-    </nav>
-  </div>
-</div>

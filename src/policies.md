@@ -1,13 +1,10 @@
 ---
-layout: base.liquid
+layout: page.liquid
 title: Policies
 date: 2024-09-16
 ---
-<article class="page">
-<header>
-{% svg 'media/logo.svg' %}
-</header>
 
+# Policies
 
 ## I'm baby etsy street art la croix
 
@@ -15,7 +12,7 @@ leggings listicle everyday carry messenger bag austin brunch keytar distillery. 
 
 ### Blue bottle helvetica XOXO bespoke
 
-#### swag keytar yuccie synth four dollar toast hella. 
+#### swag keytar yuccie synth four dollar toast hella.
 
 Vegan asymmetrical master cleanse lumbersexual af raw denim kombucha keytar. Etsy VHS occupy snackwave. Retro skateboard pabst, franzen adaptogen kogi meggings truffaut farm-to-table hashtag marfa selfies paleo small batch biodiesel.
 
@@ -26,4 +23,3 @@ Normcore synth keffiyeh chartreuse, adaptogen neutra intelligentsia narwhal you 
 Tilde gastropub vape church-key. Cliche bruh bushwick poutine, neutral milk hotel craft beer skateboard vice echo park tilde everyday carry bespoke migas. Listicle lyft sriracha, gochujang craft beer jianbing fixie pour-over tumeric disrupt readymade quinoa godard. Subway tile direct trade unicorn truffaut bespoke pabst activated charcoal biodiesel hexagon fingerstache keytar next level af. Taxidermy lumbersexual live-edge, gatekeep cupping DSA iceland subway tile selvage kickstarter yes plz sustainable.
 
 Dummy text? More like dummy thicc text, amirite?
-</article>

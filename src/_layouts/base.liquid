@@ -3,8 +3,5 @@
   {% render 'head.liquid' %}
   <body class="layout">
     {{ content }}
-    {% for script in scripts %}
-      <script defer src="{{ script }}"></script>
-    {% endfor %}
   </body>
 </html>
