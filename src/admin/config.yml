@@ -24,3 +24,11 @@ collections:
           format: 'YYYY-MM-DD',
         }
       - { label: 'Body', name: 'body', widget: 'markdown' }
+      - label: 'Links'
+        label_singular: 'Link'
+        name: 'links'
+        widget: 'list'
+        summary: '{{fields.title}} - {{fields.url}}'
+        fields:
+          - { label: URL, name: url, widget: string, default: 'https://google.com' }
+          - { label: Title, name: title, widget: string, default: 'Google' }
