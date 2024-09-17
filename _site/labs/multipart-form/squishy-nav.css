@@ -1,0 +1,167 @@
+main {
+	min-height: 100vh;
+	min-height: 100dvh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+h1 {
+	color: var(--color-ui-muted);
+	font-size: clamp(4rem, 2rem + 10vw, 12rem);
+	font-weight: 400;
+	text-align: center;
+	line-height: 1;
+	font-family: 'Chewy';
+}
+
+.squishy-nav {
+	--background-ratio: calc(2000 / 52);
+	--nav-size: 4rem;
+	--nav-button-size: calc(0.9 * var(--nav-size));
+	--background-width: calc(var(--background-ratio) * var(--nav-size));
+	--bounce-height: calc(-0.5 * var(--nav-button-size));
+	--icon-size: calc(0.35 * var(--nav-button-size));
+	--nav-links-total: 5;
+	--animation-duration: 500ms;
+	display: flex;
+	justify-content: center;
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+}
+.squishy-nav[data-active-index='1'] .nav-link:nth-of-type(n + 2) {
+	transform: translateX(5px);
+}
+.squishy-nav[data-active-index='2'] .nav-link:nth-of-type(-n + 1) {
+	transform: translateX(-5px);
+}
+.squishy-nav[data-active-index='2'] .nav-link:nth-of-type(n + 3) {
+	transform: translateX(5px);
+}
+.squishy-nav[data-active-index='3'] .nav-link:nth-of-type(-n + 2) {
+	transform: translateX(-5px);
+}
+.squishy-nav[data-active-index='3'] .nav-link:nth-of-type(n + 4) {
+	transform: translateX(5px);
+}
+.squishy-nav[data-active-index='4'] .nav-link:nth-of-type(-n + 3) {
+	transform: translateX(-5px);
+}
+.squishy-nav[data-active-index='4'] .nav-link:nth-of-type(n + 5) {
+	transform: translateX(5px);
+}
+.squishy-nav[data-active-index='5'] .nav-link:nth-of-type(-n + 4) {
+	transform: translateX(-5px);
+}
+
+.squish {
+	pointer-events: none;
+	position: absolute;
+	bottom: 0;
+	z-index: -1;
+}
+
+.squish svg {
+	max-width: none;
+	width: var(--background-width);
+	height: var(--nav-size);
+	transform: translateX(calc(-50% + var(--nav-button-size) / 2));
+}
+.squish svg path {
+	fill: var(--color-background-card);
+	stroke: var(--color-ui);
+	stroke-width: var(--border-width);
+}
+
+.nav-links {
+	display: grid;
+	grid-template-columns: repeat(var(--nav-links-total), var(--nav-button-size));
+	position: relative;
+}
+
+.nav-link {
+	transition: transform var(--animation-duration);
+}
+
+.nav-link button {
+	all: unset;
+	box-sizing: border-box;
+	cursor: pointer;
+	width: var(--nav-button-size);
+	height: var(--nav-button-size);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: transform 550ms;
+	position: relative;
+	transition: color var(--animation-duration) ease var(--animation-duration);
+}
+.nav-link button > * {
+	pointer-events: none;
+}
+.nav-link button:after {
+	border-radius: 50%;
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: var(--color-primary);
+	transform: scale(0);
+	opacity: 0;
+	transition: transform var(--animation-duration) ease var(--animation-duration),
+		opacity var(--animation-duration) ease var(--animation-duration);
+}
+.nav-link button[data-state='active'] {
+	color: var(--color-light);
+	animation: bounceUp calc(2 * var(--animation-duration)) forwards;
+}
+.nav-link button[data-state='active']:after {
+	transform: scale(0.9);
+	opacity: 1;
+}
+.nav-link button[data-state='inactive'] {
+	animation: slideDown calc(2 * var(--animation-duration)) forwards;
+}
+.nav-link button[data-state='inactive']:after {
+	transition: transform var(--animation-duration), opacity var(--animation-duration);
+}
+.nav-link button svg {
+	position: relative;
+	z-index: 1;
+	fill: none;
+	stroke: currentColor;
+	stroke-width: var(--border-width);
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	height: calc(0.3 * var(--nav-size));
+	width: calc(0.3 * var(--nav-size));
+	object-fit: contain;
+}
+
+@keyframes bounceUp {
+	0% {
+		transform: scale(1);
+	}
+	10% {
+		transform: scale(0.9);
+	}
+	30% {
+		transform: scale(1);
+	}
+	50% {
+		transform: translateY(calc(var(--bounce-height) / -6));
+	}
+	100% {
+		transform: translateY(var(--bounce-height));
+	}
+}
+@keyframes slideDown {
+	0% {
+		transform: translateY(var(--bounce-height));
+	}
+	100% {
+		transform: translateY(0);
+	}
+}

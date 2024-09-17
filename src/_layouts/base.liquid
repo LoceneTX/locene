@@ -1,0 +1,12 @@
+<!doctype html>
+<html lang="en" class="page-{{ page.fileSlug }}">
+  {% render 'head.liquid' %}
+  <body class="layout">
+    <div class="container">
+      {{ content }}
+    </div>
+    {% for script in scripts %}
+      <script defer src="{{ script }}"></script>
+    {% endfor %}
+  </body>
+</html>
