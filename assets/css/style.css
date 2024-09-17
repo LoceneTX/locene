@@ -93,7 +93,6 @@ a.fancy-link {
 .fancy-link svg {
 	width: 0.65rem;
 	opacity: 0.5;
-	transform: translateY(-0.1em);
 }
 
 .fancy-link:hover svg {
@@ -104,8 +103,8 @@ a.fancy-link {
 .page {
 	color: #2a2d37;
 	padding: 2rem max(1rem, 5vw);
-	background-color: #fff9e5;
-	background-image: url(assets/beige-paper.png);
+	background-color: #fffaf0;
+	background-image: url(../media/beige-paper.png);
 }
 
 .page header svg {
