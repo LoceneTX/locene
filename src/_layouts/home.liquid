@@ -3,22 +3,29 @@
   {% render 'head.liquid' %}
   <body>
     <div class="home-frame">
-      <header class="logo">
-        {%- svg 'media/logo.svg' %}
+      <header>
+        {%- svg 'media/locene-logo.svg' %}
+        {{ content }}
       </header>
       {% render 'divider.liquid' %}
       <nav class="link-list">
         {%- for link in links %}
           <a class="fancy-link" href="{{ link.url }}">
-            {% svg 'icons/left.svg' %}
-            <div class="title">
-              {{ link.title }}
+            <div class="link-title" href="{{ link.url }}">
+              {% svg 'icons/left.svg' %}
+              <div class="title">
+                {{ link.title }}
+              </div>
+              {% svg 'icons/right.svg' %}
             </div>
-            {% svg 'icons/right.svg' %}
+            {% if link.content %}
+              <div class="link-content">
+                {{ link.content }}
+              </div>
+            {% endif %}
           </a>
         {%- endfor %}
       </nav>
-      {% render 'divider.liquid' %}
     </div>
   </body>
 </html>

@@ -38,3 +38,4 @@ collections:
         fields:
           - { label: URL, name: url, widget: string, default: 'https://google.com' }
           - { label: Title, name: title, widget: string, default: 'Google' }
+          - { label: Content, name: content, widget: string }
