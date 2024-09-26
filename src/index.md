@@ -1,6 +1,7 @@
 ---
 layout: home.liquid
-title: Index
+title: Home
+description: Clock repair shop in Grapevine, TX.  From grandfather clocks to cuckoo clocks; mechanical, battery, or electric; if it's a clock, we can fix it.
 date: 2024-09-16
 links:
   - url: https://maps.app.goo.gl/VrifHEJJFaBrJsqS9
