@@ -51,6 +51,7 @@ export default async function (eleventyConfig) {
 	eleventyConfig.addFilter('generateProps', shortcodes.generateProps);
 
 	// passthroughs
+	eleventyConfig.addPassthroughCopy('./src/CNAME');
 	eleventyConfig.addPassthroughCopy('./src/admin/config.yml');
 	eleventyConfig.addPassthroughCopy('./assets');
 	eleventyConfig.addPassthroughCopy('./src/**/*.css');
