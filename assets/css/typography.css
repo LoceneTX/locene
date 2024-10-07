@@ -47,6 +47,7 @@ a {
 }
 a:where(:hover, :focus) {
 	color: var(--color-link-hover);
+	text-decoration: underline;
 }
 
 :where(p, ul:not([class]), ol:not([class]), pre, code, blockquote, img, video, iframe) + :is(h1, h2, h3, h4, h5, h6) {

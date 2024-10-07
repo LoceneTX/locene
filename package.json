@@ -13,6 +13,9 @@
 	"devDependencies": {
 		"@11ty/eleventy": "3.0.0-alpha.20",
 		"@11ty/eleventy-img": "latest",
-		"dotenv": "latest"
+		"dotenv": "latest",
+		"i": "^0.3.7",
+		"markdown-it-anchor": "^9.2.0",
+		"npm": "^10.9.0"
 	}
 }

@@ -1,4 +1,6 @@
-import eleventyImage, { eleventyImagePlugin } from '@11ty/eleventy-img';
+import eleventyImage from '@11ty/eleventy-img';
+import markdownItAnchor from 'markdown-it-anchor';
+import markdownIt from 'markdown-it';
 import * as fs from 'fs';
 
 const shortcodes = {
@@ -56,6 +58,8 @@ export default async function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy('./assets');
 	eleventyConfig.addPassthroughCopy('./src/**/*.css');
 	eleventyConfig.addPassthroughCopy('./src/**/*.js');
+
+	eleventyConfig.setLibrary('md', markdownIt().use(markdownItAnchor));
 
 	return {
 		dir: {

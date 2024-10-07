@@ -16,6 +16,8 @@ links:
     title: Youtube
   - url: policies
     title: Policies
+  - url: terms
+    title: Terms &amp; Conditions
 ---
 
 At Locene Clockworks, we fix all types of clocks - from grandfather clocks to cuckoo clocks; mechanical, battery, or electric; if it's a clock, we can fix it.
